@@ -11,8 +11,10 @@ def ways(cents, coin_types=[1, 5]):
     return counts[cents]
 
 def lowest_score(names, scores):
+    names, scores = np.array(names), np.array(scores)
     return names[np.argmin(scores)]
 
 def sort_names(names, scores):
+    names, scores = np.array(names), np.array(scores)
     order = np.argsort(scores)[::-1]
     return list(names[order])
